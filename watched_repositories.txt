@@ -2,10 +2,11 @@
 #    Ajouter les dossiers ou fichiers a synchroniser    #
 #    Format :                                           #
 #     - 1 entree par ligne                              #
-#     - Chemin absolu (ex: D:\Users\user/folder)        #
+#     - Chemin absolu (ex: D:\Users\user\folder)        #
 #     - Pas d'espaces avant l'entree                    #
+#     - Separation par des "\" et non par des "/"       #
 #########################################################
 #
-#D:\Users\user/folder
+#D:\Users\user\folder
 #
 #------ Inserez en dessous -------#
