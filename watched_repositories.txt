@@ -1,3 +1,11 @@
-
-
-D:\julomugos\Bureau\test
+#########################################################
+#    Ajouter les dossiers ou fichiers a synchroniser    #
+#    Format :                                           #
+#     - 1 entree par ligne                              #
+#     - Chemin absolu (ex: D:\Users\user/folder)        #
+#     - Pas d'espaces avant l'entree                    #
+#########################################################
+#
+#D:\Users\user/folder
+#
+#------ Inserez en dessous -------#
