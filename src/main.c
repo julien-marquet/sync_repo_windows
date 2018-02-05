@@ -30,7 +30,7 @@ int main(void)
     }
     fclose(f_watched);
     
-    printf("\n===========================================================\n");
+    printf("===========================================================\n");
     printf("Appuyer sur une touche pour quitter le programme\n");
     getchar();   
 
@@ -63,12 +63,12 @@ int    launchCopy(char path[MAX_LEN], HANDLE hConsole, WORD saved_attributes)
         exit(1);         
     }
     fgets(drive_buf, sizeof(drive_buf), f_drive);
-    snprintf(cmd_str, sizeof(cmd_str), "xcopy \"%s\\*.*\" \"%s%s\" /C/E/H/R/K/D/M/Y", path, trim_end(drive_buf), getFolderName(path));
+    snprintf(cmd_str, sizeof(cmd_str), "xcopy \"%s\\*.*\" \"%s%s\" /C/E/H/R/K/D/M/Y/I", path, trim_end(drive_buf), getFolderName(path));
     SetConsoleTextAttribute(hConsole, 15);
     printf("Votre PC vers %s :\n  ", trim_end(drive_buf));
     SetConsoleTextAttribute(hConsole, saved_attributes);
     system(cmd_str);
-    snprintf(cmd_str, sizeof(cmd_str), "xcopy \"%s%s\" \"%s\\*.*\" /C/E/H/R/K/D/M/Y", trim_end(drive_buf), getFolderName(path), path);
+    snprintf(cmd_str, sizeof(cmd_str), "xcopy \"%s%s\" \"%s\\*.*\" /C/E/H/R/K/D/M/Y/I", trim_end(drive_buf), getFolderName(path), path);
     SetConsoleTextAttribute(hConsole, 15);
     printf("%s vers votre PC :\n  ", trim_end(drive_buf));
     SetConsoleTextAttribute(hConsole, saved_attributes);
@@ -77,7 +77,6 @@ int    launchCopy(char path[MAX_LEN], HANDLE hConsole, WORD saved_attributes)
     SetConsoleTextAttribute(hConsole, 10);
     printf("\nSucces\n");
     SetConsoleTextAttribute(hConsole, saved_attributes);
-    printf("-------------------------------------------------------------\n");
     fflush(stdout);
     fclose(f_drive);
     return (0);
